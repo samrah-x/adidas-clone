@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {    
+    margin: 0rem;
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    color: black;
+}
+
+.header {    
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-width: 100%;
+}
+
+.customer_information {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding:5px 20px;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    line-height: 18px;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 0.2rem;
+    font-weight: 100;
+    font-size: 11px;
+    color: black;
+}
+
+.header_top {
+    display: flex;
+    align-items: center;
+    margin-left: 69vw;
+    position: relative;
+    height: 100%;
+    padding: 0 8px;
+    gap: 1rem;
+    color: black;
+    margin-bottom: 0;
+}
+
+a{
+    color: black;
+}
+
+a:hover {
+    opacity: 1 !important;       
+    transition: none !important;
+    color: black;
+}
+
+.header_top a:hover{
+    text-decoration: underline;
+    opacity: 1 !important;       
+    transition: none !important;
+    color: black;
+}
+
+.logo {
+    margin: 1rem;
+    position: relative;
+}
+
+.logo-icon {
+    font-size: 6em;
+}
+
+.categories {
+    font-weight: bold;
+}
+
+.header-bottom {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 30px;
+}
+
+.header-bottom ul {
+  display: flex;
+  gap: 1.5rem;            
+  list-style: none;
+  align-items: flex-end;
+  margin: 0;
+  margin-bottom: 1.75rem;
+  padding: 0;
+  font-size: 15px;
+}
+
+.header-bottom a {
+  text-decoration: none;
+  color: black;
+}
+
+.menulinkcontainer {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex: 5;
+}
+
+.auxiliary-menu {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+
+.actionItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.search-field{
+    background-color: lightgray;
+    border: none;
+    padding-left: 0.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.input-wrapper input::placeholder{
+    color: black;
+    font-size: 18px;
+}
+
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+@media (min-width: 960px) {
+    .customer_information {
+        display: block;
+    }
+    .header_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+  .logo-icon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .MainHeader{
+    display: none;
+  }
+}
