@@ -1,0 +1,123 @@
+.collection-card {
+    margin-bottom: 40px;
+}
+
+.grid-row {
+    display: flex;
+    margin: 0 60px 0 60px;
+}
+
+.carousel-system {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-system ul{
+    list-style: none;
+    box-sizing: content-box;
+    display: flex;
+    margin: 0;
+    overflow: scroll hidden;
+    padding: 0;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    transition: all .8s cubic-bezier(.4,0,.2,1);
+    gap: 8px;
+}
+
+
+.fillImage img {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    height: auto;
+}
+
+.card-wrapper {
+    border: 2px solid transparent; 
+    width: 29em;
+}
+
+.card-wrapper:hover {
+    border: 1px solid black; 
+}
+
+.card:hover {
+    border: 2px solid white;
+}
+
+.card-details{
+    padding: 0 1rem;
+}
+
+.card-heading {
+    min-height: 5rem;
+} 
+
+.heading-title {
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 0.3rem;
+    font-size: 15px;
+}
+.heading-title h4{
+    margin-bottom: 0;
+}
+
+.heading-summary{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-footer {
+    margin-bottom: 1rem;
+}
+
+.shop-now-link{
+    background-color: white;
+    color: black;
+    border: 0;
+    padding: 0.1rem 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 6px;
+    line-height: 5px;
+    border-radius: 0;
+}
+
+.shop-now-link p{
+    margin: 0;
+    line-height: 20px;
+}
+
+.shop-now-link:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+@media (min-width: 1024px) {
+    .carousel-system ul {
+        padding: 0 60px;
+    }
+    .carousel-system li{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc((100% - 44px) / 4);
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-system li{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc((100% - 44px) / 4);
+    }
+}

@@ -8,11 +8,24 @@ body {
     color: black;
 }
 
-.header {    
-  background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  min-width: 100%;
+.header {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-width: 100%;
+    position: fixed;
+    top: 0;  
+    left: 0;  
+    width: 100%;
+    background-color: #fff;
+    transform: translateY(0); 
+    transition: transform 0.3s ease-out; 
+    z-index: 100; 
 }
+
+.header.hidden {
+    transform: translateY(-100%); 
+}
+
 
 .customer_information {
     display: flex;
@@ -71,10 +84,11 @@ a:hover {
 .logo {
     margin: 1rem;
     position: relative;
+    padding-bottom: 1em;
 }
 
 .logo-icon {
-    font-size: 6em;
+    font-size: 4em;
 }
 
 .categories {
@@ -87,17 +101,18 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 7px 30px;
+  height: 3rem;
 }
 
 .header-bottom ul {
   display: flex;
-  gap: 1.5rem;            
+  gap: 1.6rem;            
   list-style: none;
   align-items: flex-end;
   margin: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0rem;
   padding: 0;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .header-bottom a {
