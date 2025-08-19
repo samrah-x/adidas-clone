@@ -1,5 +1,7 @@
 .collection-card {
     margin-bottom: 40px;
+    background: white;
+    height: max-content;
 }
 
 .grid-row {
@@ -9,13 +11,13 @@
 
 .carousel-system {
     display: flex;
-    position: absolute;
-    background-color: white;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     justify-content: center;
     width: 100%;
+    height: auto;
 }
 
 .carousel-system ul{
