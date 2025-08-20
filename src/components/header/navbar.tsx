@@ -1,40 +1,27 @@
 import './header.css';
 
+const categories =[
+    "MEN", "WOMEN", "KIDS", 
+];
+
+const options = [
+    "BACK TO SCHOOL", "SALE", "NEW & TRENDING",
+];
 
 export default function NavBar () {
     return <>
         <div className="menulinkcontainer">
             <ul>
-                <li>
-                    <a href="" className="categories">
-                        MEN
-                    </a>
-                </li>
-                <li>
-                    <a href="" className="categories">
-                        WOMEN
-                    </a>
-                </li>
-                <li>
-                    <a href="" className="categories">
-                        KIDS
-                    </a>
-                </li>
-                <li>
-                    <a href="" className="options">
-                        BACK TO SCHOOL
-                    </a>
-                </li>
-                <li>
-                    <a href="" className="options">
-                        SALE
-                    </a>
-                </li>
-                <li>
-                    <a href="" className="options">
-                        NEW & TRENDING
-                    </a>
-                </li>
+                {categories.map((category) =>(
+                    <li>
+                        <a href="" className="categories">{category}</a>
+                    </li>
+                ))}
+                {options.map((option) =>(
+                    <li>
+                        <a href="" className="options">{option}</a>
+                    </li>
+                ))}
             </ul>
         </div>    
     </>

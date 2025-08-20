@@ -20,6 +20,7 @@ body {
     transform: translateY(0);   
     transition: transform 0.3s ease-out; 
     z-index: 100; 
+    border-bottom: rgb(215, 215, 215) 0.5px solid;
 }
 
 .header.hidden {
@@ -100,7 +101,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 30px;
+  padding: 0px 30px;
   height: 3rem;
 }
 
@@ -140,6 +141,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    cursor: pointer;
 }
 
 
@@ -150,6 +152,45 @@ a:hover {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: black;
+}
+
+.search-field:focus {
+    border-radius: 0%;
+    border: black;
+    outline: none;
+}
+
+.search-icon{
+    cursor: pointer;
+}
+
+.drop-down-cart {
+  display: none;
+  position: absolute;
+  justify-content:left;
+  background-color: #ffffff;
+  transform:translateX(-85%) translateY(8%);
+  min-width: 350px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  z-index: 1;
+  border: rgb(215, 215, 215) 0.5px solid;
+  visibility: hidden;
+}
+
+
+.drop-down-cart h4{
+    font-weight: 600;
+}
+
+.drop-down:hover .drop-down-cart {
+  visibility: visible;
+    display: block;
+}
+
+.drop-down:hover .drop-down-cart:hover {
+    display: block;
 }
 
 .input-wrapper input::placeholder{
