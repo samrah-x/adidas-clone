@@ -114,21 +114,22 @@
 }
 
 
-.product-image img{
-    /* width: 245px; */
-    width: 21vw;
-}
 
 .wishlist {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
 }
 
 .wishlist:hover{
     cursor:pointer;
-   fill: black;
+    fill: black;
+}
+
+.product-image img{
+    /* width: 245px; */
+    width: 21vw;
 }
 
 .product-info {

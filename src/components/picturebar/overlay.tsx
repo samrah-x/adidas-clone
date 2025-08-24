@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Promo from "./promo"
 
 export default function Overlay() {
@@ -6,9 +7,9 @@ export default function Overlay() {
         <div className="hero-overlay">
             <Promo/>
             <div className="buttons">
-                <button>WOMEN →</button>
-                <button>MEN →</button>
-                <button>KIDS →</button>
+                <button><Link to='/women'>WOMEN →</Link></button>
+                <button><Link to='/men'>MEN →</Link></button>
+                <button><Link to='/kids'>KIDS →</Link></button>
             </div>
         </div>
         </div>

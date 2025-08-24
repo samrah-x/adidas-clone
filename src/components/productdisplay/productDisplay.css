@@ -1,0 +1,55 @@
+.productDisplay {
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.productLeft {
+    display: flex;
+    gap: 17px;
+}
+
+.displayMainImg {
+    display: flex;
+}
+
+.displayMainImg img {
+    width: 586px;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    font-size: 24px;
+}
+
+.sizes ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sizes ul li{
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sizes ul li:hover{
+    /* border: 1px solid white; */
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+}
+
+.add-to-bag {
+    width: 100%;
+    border-radius: 0;
+}

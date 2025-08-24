@@ -25,7 +25,10 @@ export default function GridRow() {
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
     const visibleProducts = products.filter(
-        (product) => product.tab === activeTab
+        (product) =>
+            Array.isArray(product.tab)
+                ? product.tab.includes(activeTab)
+                : product.tab === activeTab
     );
 
 	return (
@@ -55,7 +58,7 @@ export default function GridRow() {
                                         <HiOutlineHeart width={24} className="wishlist"/>
                                     </div>
                                     <div className="product-info">
-                                        <div className="product-price">{product.price}</div>
+                                        <div className="product-price">${product.price}</div>
                                         <div className="product-name">{product.name}</div>
                                         <div className="product-tag">{product.tag}</div>
                                     </div>

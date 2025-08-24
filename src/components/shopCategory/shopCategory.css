@@ -1,0 +1,15 @@
+
+.shop-category ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    line-height: 18px;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 0.2rem;
+    font-weight: 100;
+    font-size: 11px;
+    color: black;
+    flex-wrap: wrap;
+}

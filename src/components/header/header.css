@@ -165,12 +165,17 @@ a:hover {
     cursor: pointer;
 }
 
+.drop-down svg{
+    margin-bottom: 4px;
+}
+
 .drop-down-cart {
   display: none;
   position: absolute;
   justify-content:left;
   background-color: #ffffff;
-  transform:translateX(-85%) translateY(8%);
+  transform:translateX(-85%) translateY(7%);
+    margin-top: 6px;
   min-width: 350px;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -179,6 +184,9 @@ a:hover {
   visibility: hidden;
 }
 
+/* .drop-btn{
+    fill: black;
+} */
 
 .drop-down-cart h4{
     font-weight: 600;
@@ -191,6 +199,22 @@ a:hover {
 
 .drop-down:hover .drop-down-cart:hover {
     display: block;
+}
+
+.cart-count {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:translateX(280%) translateY(-40%);
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 13px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(41, 124, 176, 0.95);
+    color: white;
 }
 
 .input-wrapper input::placeholder{

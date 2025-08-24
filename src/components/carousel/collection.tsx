@@ -3,7 +3,7 @@ import TEAMGEIST from "../../assets/global_teamgeist_originals_fw25_launch_catlp
 import ADIZEROEVOSL from "../../assets/global_adizero_evo_sl_running_fw25_sustain_catlp_navigation_card_teaser_1_d_712a147fc9.avif";
 import Y3TENNIS from "../../assets/global_tennis_x_y3_apparel_us_open_y3_fw25_launch_onsite_pegula_navigation_card_teaser_d_047400bb55.avif";
 
-export const products = [
+export const collection = [
     {
         id: 1,
         heading: "SAMBA",

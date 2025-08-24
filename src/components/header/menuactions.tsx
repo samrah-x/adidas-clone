@@ -1,8 +1,9 @@
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
-import { SlBag } from "react-icons/sl";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 import { VscHeart } from "react-icons/vsc";
 import './header.css';
+import { Link } from "react-router-dom";
 
 
 export default function MenuActions() {
@@ -15,10 +16,11 @@ export default function MenuActions() {
                 </div>
             </div>
             <div className="actionItems">
-                <CgProfile size={32}/>
-                <VscHeart size={32}/>
+                <Link to='/profile'><CgProfile size={32}/></Link>
+                <Link to='/wishlist'><VscHeart size={32}/></Link>
                 <div className="drop-down">
-                    <SlBag className="drop-btn" size={28} />
+                    <Link to='/cart'><HiOutlineShoppingBag className="drop-btn" size={28} /></Link>
+                    <div className="cart-count">0</div>
                     <div className="drop-down-wrapper">
                         <div className="drop-down-cart">
                             <h4>Your Cart is Empty</h4>

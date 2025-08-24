@@ -1,11 +1,12 @@
 import { SiAdidas } from "react-icons/si";
 import './header.css';
+import { Link } from "react-router-dom";
 
 
 export default function Logo () {
     return <>
         <a href="" className="logo">
-            <SiAdidas className="logo-icon"/>
+            <Link to='/'><SiAdidas className="logo-icon"/></Link>
         </a>
     </>
 }

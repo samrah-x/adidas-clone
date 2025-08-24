@@ -1,0 +1,26 @@
+.product-image img{
+    /* width: 245px; */
+    width: 21vw;
+}
+
+.product-info {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0.5rem;
+    padding-bottom: 0;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+}
+
+.product-name {
+    margin-bottom: 0.2rem;
+}
+
+.product-tag {
+  color: #888;
+  font-size: 0.95rem;
+} 

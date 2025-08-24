@@ -1,5 +1,5 @@
 import './picturebar.css'
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import localImageSuperStar from "../../assets/hero-banner.avif";
 
 export default function Image() {
@@ -19,7 +19,7 @@ export default function Image() {
   }, []);
 
     const superstarLinkOffline = localImageSuperStar;
-    const summerLinkOnline = "https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/promo_fw25_august_bnr_d_06394406e7.jpg";
+    // const summerLinkOnline = "https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/promo_fw25_august_bnr_d_06394406e7.jpg";
     const superstarLinkOnline = "https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/global_superstar_originals_fw25_sustain_hp_banner_hero4_asset_d_ee4c0b8155.jpg";
 
     return <>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./card";
 import './carousel.css';
-import { products } from "./products";
+import { collection } from "./collection";
 
 
 export default function Carousel() {
@@ -27,13 +27,13 @@ export default function Carousel() {
                 <div className="grid-row"></div>
                 <div className="carousel-system">
                     <ul>
-                        {products.map((product) => (
+                        {collection.map((item) => (
                             <Card
-                                key={product.id}
-                                heading={product.heading}
-                                summary={product.summary ?? product.Summary ?? ""}
-                                img_link={isOnline? product.img_link! : product.offlineImg! }
-                                img_alt={product.img_alt ?? product.tag ?? ""}
+                                key={item.id}
+                                heading={item.heading}
+                                summary={item.summary ?? item.Summary ?? ""}
+                                img_link={isOnline? item.img_link! : item.offlineImg! }
+                                img_alt={item.img_alt ?? item.tag ?? ""}
                             />
                         ))}
                     </ul>
