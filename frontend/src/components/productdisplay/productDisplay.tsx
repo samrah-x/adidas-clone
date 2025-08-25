@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import './productDisplay.css';
+import { ShopContext } from '../../context/shopcontext';
 
 interface ProductProps {
   id: number;
@@ -12,8 +14,10 @@ interface ProductProps {
 }
 
 
-export default function ProductDisplay (props: { product?: ProductProps }) {
+export default function ProductDisplay (props: { product: ProductProps }) {
     const product = props;
+
+    const {addToCart} = useContext(ShopContext);
 
     return (
         <div className="productDisplay">
@@ -36,7 +40,7 @@ export default function ProductDisplay (props: { product?: ProductProps }) {
                         <li>M 6.5 / W 7.5</li>
                     </ul>
                 </div>
-                <button className='add-to-bag'>ADD TO BAG</button>
+                <button className='add-to-bag' onClick={() => addToCart(product.product?.id)}>ADD TO BAG</button>
             </div>
         </div>
     )

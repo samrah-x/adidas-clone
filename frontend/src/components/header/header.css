@@ -184,9 +184,9 @@ a:hover {
   visibility: hidden;
 }
 
-/* .drop-btn{
+.drop-btn:hover{
     fill: black;
-} */
+}
 
 .drop-down-cart h4{
     font-weight: 600;
