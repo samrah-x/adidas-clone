@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px 60px;
+    box-shadow: 0 1px 3px -2px #000;
+    margin-bottom: 1px;
+    background: white;
+}
+
+.navbar-left{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 2rem 0 2rem;
+}
+
+.navbar-header h2{
+    margin: 0;
+}
+
+.navbar-header p {
+    margin: 0;
+    color: red;
+}
+
+.navbar-profile{
+    align-self: center;
+}
+
+
+@media(max-width:800px){
+    .navbar{
+        padding: 15px 30px;
+    }
+    .nav-logo{
+        width: 150px;
+    }
+    .nav-profile{
+        width: 60px;
+    }
+}
