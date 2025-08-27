@@ -7,7 +7,7 @@ interface ProductProps {
   name: string;
   price: number;
   image: string;
-  image_offline: string;
+//   image_offline: string;
   tag: string;
   tab: string[];
   category: string[];

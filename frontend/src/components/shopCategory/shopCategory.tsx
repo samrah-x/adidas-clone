@@ -33,6 +33,7 @@ export default function ShopCategory ({category} : categoryProp) {
     return (
     <div className="shop-category">
         <ul>
+            {/* {visibleProducts.map((product) =>  */}
             {products.map((product) => 
             (   
                 <li key={product.id}>

@@ -1,12 +1,12 @@
-import { createContext, useState, type ReactNode } from "react";
-import { products } from "../components/grid-row/products";
+import { createContext, useEffect, useState, type ReactNode } from "react";
+// import { products } from "../components/grid-row/products";
 
 interface ProductProps {
   id: number;
   name: string;
   price: number;
   image: string;
-  image_offline: string;
+  // image_offline: string;
   tag: string;
   tab: string[];
   category: string[];
@@ -29,15 +29,22 @@ export const ShopContext = createContext<ShopContextValue>({} as ShopContextValu
 
 const getDefaultCart = () =>{
     let cart: { [key: number]: number } = {};
-    for(let index = 0; index < products.length; index++) {
-      cart[products[index].id] = 0; 
+    for(let index = 0; index < 300; index++) {
+      cart[index] = 0; 
     }
     return cart;
   }
   
 export const ShopContextProvider = ({ children }: ShopProviderProps) => {
+  const [products, setProducts] = useState<ProductProps[]>([]);
   const [cartItems, setCartItems] = useState(getDefaultCart());
   
+  useEffect(()=>{
+    fetch('http://localhost:4000/allproducts')
+    .then((response)=>response.json())
+    .then((data)=>setProducts(data))
+  }, [])
+
   const addToCart = (itemId: number) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId]+1}));
   }

@@ -12,7 +12,12 @@ export default function Product() {
 
     return(
         <div>
-            <ProductDisplay product={a_product}></ProductDisplay>
+            {a_product ? (
+                <ProductDisplay product={a_product} />
+                ) : (
+                <p>Product not found</p>
+                )
+            }
         </div>
     )
 }

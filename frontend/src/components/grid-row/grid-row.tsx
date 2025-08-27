@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./grid-row.css";
 import {  HiOutlineHeart } from "react-icons/hi";
-import { products } from "./products";
+import { ShopContext } from "../../context/shopcontext";
+// import { products } from "./products";
 
 const tabs = ["New Arrivals", "Best Sellers", "New to Sale"];
 
 export default function GridRow() {
+    const {products} = useContext(ShopContext);
     const [isOnline, setIsOnline] = useState(navigator.onLine);
         
         useEffect(() => {
@@ -54,7 +56,7 @@ export default function GridRow() {
                             <li className="grid-element">
                                 <div className="product-card" key={product.id}>
                                     <div className="product-image">
-                                        <img src={isOnline? product.image : product.image_offline} alt={product.name} />
+                                        <img src={product.image} alt={product.name} />
                                         <HiOutlineHeart width={24} className="wishlist"/>
                                     </div>
                                     <div className="product-info">

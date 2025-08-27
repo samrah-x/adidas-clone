@@ -8,6 +8,7 @@ const path = require("path");
 const cors = require("cors");
 const { type } = require("os");
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
@@ -60,10 +61,10 @@ const Product = mongoose.model("Product", {
         type: String,
         required: true,
     },
-    image_offline: {
-        type: String,
-        required: true,
-    },
+    // image_offline: {
+    //     type: String,
+    //     required: true,
+    // },
     tag: {
         type: String,
         required: true,
@@ -103,7 +104,7 @@ app.post('/addproduct', async (req, res) => {
         name: req.body.name,
         price: req.body.price,
         image: req.body.image,
-        image_offline: req.body.image_offline,
+        // image_offline: req.body.image_offline,
         tag: req.body.tag,
         tab: req.body.tab,
         category: req.body.category,
@@ -135,6 +136,7 @@ app.get('/allproducts', async (req,res) => {
     console.log("all products fetched");
     res.send(products);
 })
+
 
 // Error Handling 
 
